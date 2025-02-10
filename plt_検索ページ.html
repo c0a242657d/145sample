@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>検索フォーム</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EAEAEA;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 300px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #F8F8F8;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+        .search-option span {
+            font-size: 14px;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background: white;
+            border: 1px solid #ddd;
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        .dropdown div {
+            padding: 8px;
+            cursor: pointer;
+        }
+        .dropdown div:hover {
+            background: #f0f0f0;
+        }
+        .search-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+    <script>
+        function toggleDropdown(id) {
+            let dropdown = document.getElementById(id);
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+        function selectOption(id, value) {
+            let element = document.getElementById(id).previousElementSibling;
+            element.innerText = value;
+            document.getElementById(id).style.display = 'none';
+        }
+        document.addEventListener('click', function(event) {
+            let dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.parentElement.contains(event.target)) {
+                    dropdown.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>検索</h2>
+        <div class="search-option" onclick="toggleDropdown('prefectureDropdown')">
+            <span>都道府県を選択</span>
+            <span>＋</span>
+            <div id="prefectureDropdown" class="dropdown">
+                <div onclick="selectOption('prefectureDropdown', '東京都')">東京都</div>
+                <div onclick="selectOption('prefectureDropdown', '大阪府')">大阪府</div>
+                <div onclick="selectOption('prefectureDropdown', '北海道')">北海道</div>
+            </div>
+        </div>
+        <div class="search-option" onclick="toggleDropdown('areaDropdown')">
+            <span>エリアを選択</span>
+            <span>＋</span>
+            <div id="areaDropdown" class="dropdown">
+                <div onclick="selectOption('areaDropdown', '渋谷')">渋谷</div>
+                <div onclick="selectOption('areaDropdown', '新宿')">新宿</div>
+                <div onclick="selectOption('areaDropdown', '梅田')">梅田</div>
+            </div>
+        </div>
+        <div class="search-option" onclick="toggleDropdown('typeDropdown')">
+            <span>種類を選択</span>
+            <span>＋</span>
+            <div id="typeDropdown" class="dropdown">
+                <div onclick="selectOption('typeDropdown', 'ボランティア')">ボランティア</div>
+                <div onclick="selectOption('typeDropdown', 'イベント')">イベント</div>
+                <div onclick="selectOption('typeDropdown', 'ワークショップ')">ワークショップ</div>
+            </div>
+        </div>
+        <div class="search-option" onclick="toggleDropdown('periodDropdown')">
+            <span>期間を選択</span>
+            <span>＋</span>
+            <div id="periodDropdown" class="dropdown">
+                <div onclick="selectOption('periodDropdown', '1日')">1日</div>
+                <div onclick="selectOption('periodDropdown', '1週間')">1週間</div>
+                <div onclick="selectOption('periodDropdown', '1ヶ月')">1ヶ月</div>
+            </div>
+        </div>
+        <button class="search-button">この条件で探す</button>
+    </div>
+</body>
+</html>
