@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ボランティア募集ページ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EAEAF2;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 320px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        h2 {
+            font-size: 16px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #F7F7F7;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .button {
+            display: block;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link-button {
+            display: block;
+            background-color: #D3D3D3;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .coupon {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .form {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>ピックアップ記事</h2>
+        <div class="card">
+            <h3>自然公園の清掃</h3>
+            <img src="cleaning.jpg" alt="清掃活動">
+            <p>現在の参加人数：12人</p>
+            <p>【募集要項】<br>日程: 毎週日曜日<br>場所: ○○自然公園<br>時間: 9:00 - 12:00<br>持ち物: 軍手・ゴミ袋・飲み物</p>
+            <p>【説明】<br>環境保護の一環として公園の清掃活動を行います。初心者でも気軽に参加できます。</p>
+            <a href="#" class="button">詳細はこちら</a>
+        </div>
+        
+        <div class="coupon">
+            <h3>クーポン情報</h3>
+            <p>☕ フェル珈琲</p>
+            <img src="coupon.jpg" alt="クーポン">
+            <p>お好きなメニュー<br><strong>一品 30円引き</strong></p>
+            <p>有効期限: 10月1日〜3月31日</p>
+        </div>
+        
+        <div class="form">
+            <h3>参加フォーム</h3>
+            <p>私はこのボランティアでの活動に参加を希望します。</p>
+            <input type="checkbox"> 交通手段を確保できます<br>
+            <input type="checkbox"> 必要な持ち物を準備できます<br>
+            <textarea placeholder="参加に向けた意気込みを入力してください"></textarea>
+            <a href="#" class="button">参加する！</a>
+        </div>
+    </div>
+</body>
+</html>
