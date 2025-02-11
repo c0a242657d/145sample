@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プレビュー画面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EAEAEA;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            width: 320px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .section {
+            background: #F8F8F8;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 80px;
+            background: #D3D3D3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #CCC;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>プレビュー</h2>
+        <div class="section">
+            <strong>タイトル</strong>
+            <div class="image-placeholder">画像</div>
+        </div>
+        <div class="section">
+            <strong>募集要項</strong>
+            <textarea class="input-field" rows="2">募集職種や対象者など</textarea>
+        </div>
+        <div class="section">
+            <strong>説明</strong>
+            <textarea class="input-field" rows="3">説明を入力してください</textarea>
+        </div>
+        <div class="section">
+            <strong>クーポン情報</strong>
+            <div class="image-placeholder">店名</div>
+            <div class="image-placeholder">商品画像</div>
+            <textarea class="input-field" rows="2">商品名、割引額など</textarea>
+        </div>
+        <div class="section">
+            <strong>トップ画像</strong>
+            <input type="file" class="input-field">
+        </div>
+        <div class="section">
+            <strong>タイトル</strong>
+            <input type="text" class="input-field" placeholder="タイトルを入力してください">
+        </div>
+        <div class="section">
+            <strong>募集要項</strong>
+            <textarea class="input-field" rows="3">募集要項を入力してください</textarea>
+        </div>
+        <div class="section">
+            <strong>説明</strong>
+            <textarea class="input-field" rows="3">詳細説明を入力してください</textarea>
+        </div>
+        <div class="section">
+            <strong>クーポン</strong>
+            <input type="text" class="input-field" placeholder="クーポンを入力してください">
+        </div>
+        <div class="section">
+            <strong>タグ</strong>
+            <input type="text" class="input-field" placeholder="タグを入力してください">
+        </div>
+        <div class="section">
+            <strong>マップ</strong>
+            <input type="text" class="input-field" placeholder="マップを入力してください">
+        </div>
+        <div class="section">
+            <strong>募集人数の上限</strong>
+            <input type="number" class="input-field" placeholder="募集人数を入力してください">
+        </div>
+        <div class="section">
+            <strong>記事の公開</strong><br>
+            <label><input type="radio" name="publish" value="draft"> 下書き</label>
+            <label><input type="radio" name="publish" value="public"> 公開</label>
+        </div>
+    </div>
+</body>
+</html>
