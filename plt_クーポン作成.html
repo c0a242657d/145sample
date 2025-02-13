@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クーポン作成</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F4F4F4;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #FF4500;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .preview {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            background-color: #FFF;
+        }
+        .calendar {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>クーポン情報</h2>
+        <div class="preview">
+            <strong>店名</strong>
+            <div style="background:#ccc; height: 100px; text-align: center; line-height: 100px;">商品の写真など</div>
+            <p>商品名や割引額など</p>
+        </div>
+        <div class="calendar">カレンダー表示</div>
+        <form>
+            <div class="form-group">
+                <label for="store-name">店名</label>
+                <input type="text" id="store-name" placeholder="店名を入力してください">
+            </div>
+            <div class="form-group">
+                <label for="coupon-title">クーポン名</label>
+                <input type="text" id="coupon-title" placeholder="クーポン名を入力してください">
+            </div>
+            <div class="form-group">
+                <label for="description">概要</label>
+                <textarea id="description" placeholder="クーポンの概要を入力してください"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="expiry-date">有効期限</label>
+                <input type="date" id="expiry-date">
+            </div>
+            <a href="coupon_page.html" class="submit-button">クーポンを作成</a>
+        </form>
+    </div>
+</body>
+</html>
