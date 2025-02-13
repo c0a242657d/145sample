@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クーポンQRコード</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EAEAEA;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 300px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            background: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px auto;
+        }
+        .coupon-text {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .expiry {
+            font-size: 14px;
+            color: gray;
+        }
+        .back-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #555;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>クーポン</h2>
+        <p>お会計時にレジでQRコードを提示してください</p>
+        <div class="qr-code">QRコード</div>
+        <div class="coupon-text">お好きな天ぷら<br><span>一品 30円引き</span></div>
+        <p class="expiry">有効期限：1900年12月25日</p>
+        <a href="coupon.html" class="back-button">戻る</a>
+    </div>
+</body>
+</html>
