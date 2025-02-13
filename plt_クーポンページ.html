@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クーポン</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EAEAEA;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 300px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .coupon-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .coupon-content {
+            border: 2px solid black;
+            padding: 10px;
+            border-radius: 8px;
+            background: white;
+            margin-bottom: 10px;
+        }
+        .coupon-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- クーポンページ -->
+    <div class="container" id="couponPage">
+        <div class="coupon-title">クーポン</div>
+        <div class="coupon-content">
+            <p><strong>☕ フェル珈琲</strong></p>
+            <img src="store_image.png" alt="店舗画像" width="100%">
+            <p><strong>お好きな天ぷら</strong></p>
+            <p><strong>一品 30円引き</strong></p>
+            <p>有効期限：1900年12月25日</p>
+        </div>
+        <a href="qrcode.html" class="coupon-button">クーポンコードを表示</a>
+    </div>
+</body>
+</html>
